@@ -1,0 +1,129 @@
+<resources>
+
+    <style name="AppTheme" parent="@android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionMenuTextColor">@color/title_white</item>
+        <item name="android:dialogTheme">@style/DialogTheme</item>
+        <item name="android:actionBarWidgetTheme">@style/MyActionBarWidgetThemeStyle</item>
+        <item name="homeAsUpIndicator">@drawable/ic_action_previous_item</item>
+    </style>
+
+    <style name="MyTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/title_white</item>
+    </style>
+
+    <style name="MySubTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/actionbar_subtitle</item>
+    </style>
+
+    <style name="MyActionBarWidgetThemeStyle">
+        <item name="android:textColorHint">@color/actionbar_subtitle</item>
+        <item name="android:textColor">@color/title_white</item>
+        <item name="android:editTextColor">@color/title_white</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/main_blue</item>
+        <item name="android:actionMenuTextColor">@color/title_white</item>
+        <item name="android:titleTextStyle">@style/MyTitleTextStyle</item>
+        <item name="android:subtitleTextStyle">@style/MySubTitleTextStyle</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="homeAsUpIndicator">@drawable/ic_action_previous_item</item>
+    </style>
+
+    <style name="DialogTheme" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:textColor">@color/title_white</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/edittext_textColorHint</item>
+        <item name="android:textColor">@color/edittext_textColor</item>
+        <item name="android:background">@color/app_background</item>
+        <item name="android:padding">@dimen/edittext_padding</item>
+        <item name="android:textSize">@dimen/main_textsize</item>
+    </style>
+
+    <style name="DividerDefault">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="DividerThin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="ListViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:divider">@color/divider</item>
+        <item name="android:dividerHeight">@dimen/divider_height</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:background">@color/app_background</item>
+    </style>
+
+    <style name="TextViewInvisibleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/main_textsize</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:textColor">@color/textview_nodata_textColor</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/main_textsize</item>
+        <item name="android:textColor">@color/textview_main_color</item>
+    </style>
+
+    <style name="LayoutVerticalStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/app_background</item>
+    </style>
+
+    <style name="RadioButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:button">@drawable/radiobutton_selector</item>
+    </style>
+
+    <style name="WebViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/app_background</item>
+    </style>
+
+    <style name="ProgressBarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="PagerSlidingTabStripStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tab_strip_height</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/textview_nodata_textColor</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="ViewPagerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+</resources>
+

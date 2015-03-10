@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ЦДО НИУ ИТМО</string>
+
+    <string name="app_version">2.1.5</string>
+    <string name="version_plus_number">Версия %1$s</string>
+    <string name="dev_name">Максим Рудик</string>
+    <string name="dev_mail">roninmax12@gmail.com</string>
+    <string name="dev_site">http://vk.com/maxim_rudik</string>
+    <string name="app_site">http://vk.com/cde_android</string>
+    <string name="about_app">О программе</string>
+
+    <string name="googlePlay_page">Страница в Google Play</string>
+    <string name="googlePlay_page_hint">Информация, отзывы, оценки</string>
+    <string name="vk_page">Страница ВКонтакте</string>
+    <string name="vk_page_hint">Вопросы, пожелания, ошибки</string>
+    <string name="dev_name_hint">Разработчик приложения</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="navigation_drawer_items">
+        <item>Электронный журнал</item>
+        <item>Протокол изменений</item>
+        <item>Рейтинг</item>
+        <item>Запись в ЦДО</item>
+        <item>Расписание занятий</item>
+        <item>Расписание сессии</item>
+        <item>Расписание аттестаций</item>
+        <item>Настройки</item>
+        <item>Выход</item>
+    </string-array>
+
+    <string name="settings_title_semester">Текущий семестр</string>
+    <string name="settings_subtitle_semester">Показывать баллы только за текущий семестр</string>
+    <string name="settings_title_notification">Уведомления</string>
+    <string name="settings_subtitle_notification">Уведомлять о новых баллах</string>
+    <string name="settings_title_expand">Протокол изменений</string>
+    <string name="settings_subtitle_expand">Показывать протокол изменений в развёрнутом виде</string>
+
+    <string name="title_activity_login">Авторизация</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="signin">Вход</string>
+    <string name="incorrect_login_on_password">Некорректный логин или пароль</string>
+    <string name="authorization_error">Ошибка авторизации</string>
+
+    <string name="year_study">Год обучения</string>
+    <string name="choose_year_study">Выберите год обучения</string>
+    <string name="wait_load_data">Дождитесь загрузки данных</string>
+
+    <string name="final_rating">Итоговый рейтинг: %1$s</string>
+    <string name="rating">Рейтинг:</string>
+    <string name="x_from_y">%1$s из %2$s</string>
+    <string name="no_data">Нет данных</string>
+    <string name="threshold_value">Пороговое значение:</string>
+    <string name="do_not_rush">Полегче, не спеши, открой еще раз</string>
+    <string name="faculty">Факультет:</string>
+    <string name="course">Курс:</string>
+    <string name="position">Позиция:</string>
+    <string name="please_wait">Пожалуйста, подождите</string>
+    <string name="exams">Экзамены</string>
+    <string name="consultations">Консультации</string>
+
+</resources>

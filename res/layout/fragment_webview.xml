@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frameLayout"
+    style="@style/LayoutVerticalStyle">
+
+    <WebView
+        android:id="@+id/webView"
+        style="@style/WebViewStyle"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:progress="15"
+        android:progressTintMode="add"
+        style="?android:progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/progressbar_web"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextViewInvisibleStyle"
+        android:visibility="visible"
+        android:text="@string/please_wait"/>
+
+</FrameLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LayoutVerticalStyle"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/faculty"
+            android:textColor="@color/textview_nodata_textColor"/>
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/course"
+            android:textColor="@color/textview_nodata_textColor"/>
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/position"
+            android:textColor="@color/textview_nodata_textColor"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/textview_ratings_faculty"
+            style="@style/TextViewStyle"
+            android:textStyle="bold"
+            android:text="ИТиП"/>
+
+        <TextView
+            android:id="@+id/textview_ratings_course"
+            style="@style/TextViewStyle"
+            android:textStyle="bold"
+            android:text="4"/>
+
+        <TextView
+            android:id="@+id/textview_ratings_position"
+            style="@style/TextViewStyle"
+            android:textStyle="bold"
+            android:text="123 из 256"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_choose_year"
+        android:icon="@drawable/ic_action_about_white"
+        android:title="@string/about_app"
+        android:visible="true"
+        android:showAsAction="ifRoom"/>
+</menu>

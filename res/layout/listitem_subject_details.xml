@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="@dimen/layout_padding">
+
+    <TextView
+        android:id="@+id/textview_title"
+        style="@style/TextViewStyle"
+        android:textStyle="bold"
+        android:text="Title is a wonderful part of difference"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/threshold_value"
+            android:layout_width="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textview_threshold"
+            style="@style/TextViewStyle"
+            android:text="15"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/rating"
+            android:layout_width="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textview_points"
+            style="@style/TextViewStyle"
+            android:text="16,59 из 46,84"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
