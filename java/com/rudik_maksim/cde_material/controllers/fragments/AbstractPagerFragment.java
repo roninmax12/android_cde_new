@@ -1,12 +1,15 @@
 package com.rudik_maksim.cde_material.controllers.fragments;
 
 import android.app.Activity;
+import android.graphics.PorterDuff;
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.rudik_maksim.cde_material.R;
@@ -18,6 +21,8 @@ import com.rudik_maksim.cde_material.controllers.PointsActivity;
 public abstract class AbstractPagerFragment extends Fragment{
     public static PagerSlidingTabStrip sTabs;
     public static ViewPager sPager;
+    public static ProgressBar sProgressBar;
+    public static LayoutInflater sLayoutInflater;
 
     public static final String ARG_SECTION_NUMBER = "section_number";
 
@@ -27,6 +32,8 @@ public abstract class AbstractPagerFragment extends Fragment{
 
         setRetainInstance(true);
         setHasOptionsMenu(true);
+
+        sLayoutInflater = getActivity().getLayoutInflater();
     }
 
     @Override
@@ -42,6 +49,10 @@ public abstract class AbstractPagerFragment extends Fragment{
 
         sTabs = (PagerSlidingTabStrip) v.findViewById(R.id.tabs);
         sPager = (ViewPager) v.findViewById(R.id.pager);
+        sProgressBar = (ProgressBar) v.findViewById(R.id.progressBar);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            sProgressBar.getIndeterminateDrawable().setColorFilter(getResources().getColor(R.color.main_blue), PorterDuff.Mode.SRC_IN);
 
         return v;
     }

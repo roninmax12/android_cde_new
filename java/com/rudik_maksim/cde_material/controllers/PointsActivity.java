@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import com.rudik_maksim.cde_material.controllers.activities.AbstractActivity;
 import com.rudik_maksim.cde_material.controllers.fragments.PointsFragment;
 import com.rudik_maksim.cde_material.controllers.fragments.RatingsFragment;
 import com.rudik_maksim.cde_material.controllers.fragments.RecordCdeFragment;
+import com.rudik_maksim.cde_material.controllers.fragments.ScheduleFragment;
 import com.rudik_maksim.cde_material.controllers.fragments.SessionFragment;
 import com.rudik_maksim.cde_material.controllers.fragments.SettingsFragment;
 import com.rudik_maksim.cde_material.modules.ApplicationPreferences;
@@ -31,6 +33,8 @@ import com.rudik_maksim.cde_material.modules.Connection;
 import com.rudik_maksim.cde_material.modules.Global;
 import com.rudik_maksim.cde_material.modules.Points;
 import com.rudik_maksim.cde_material.modules.Rating;
+import com.rudik_maksim.cde_material.modules.Schedule;
+import com.rudik_maksim.cde_material.modules.Session;
 import com.rudik_maksim.cde_material.modules.User;
 import com.rudik_maksim.cde_material.modules.parsers.PointParser;
 
@@ -112,6 +116,11 @@ public class PointsActivity extends AbstractActivity
                         .replace(R.id.container, RecordCdeFragment.newInstance(position + 1))
                         .commit();
                 break;
+            case Global.Configuration.NAV_SCHEDULE:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, ScheduleFragment.newInstance(position + 1))
+                        .commit();
+                break;
             case Global.Configuration.NAV_SESSION_SCHEDULE:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, SessionFragment.newInstance(position + 1))
@@ -135,6 +144,8 @@ public class PointsActivity extends AbstractActivity
         User.get().destruct();
         Points.get().destruct();
         Rating.get().destruct();
+        Session.get().destruct();
+        Schedule.get().destruct();
 
         if (Global.sAuthorizationPreferences != null){
             Global.sAuthorizationPreferences.clear();

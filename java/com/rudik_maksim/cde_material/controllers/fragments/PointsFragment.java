@@ -1,6 +1,8 @@
 package com.rudik_maksim.cde_material.controllers.fragments;
 
 import android.content.Intent;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,7 +25,6 @@ import com.rudik_maksim.cde_material.modules.items.PointItem;
 import com.rudik_maksim.cde_material.modules.Points;
 import com.rudik_maksim.cde_material.modules.SubjectDetails;
 import com.rudik_maksim.cde_material.modules.User;
-import com.rudik_maksim.cde_material.modules.parsers.PointParser;
 
 /**
  * Created by maksimrudik on 02.03.15.
@@ -99,7 +100,20 @@ public class PointsFragment extends AbstractAuthorizationFragment implements INe
         mFrameLayout.startAnimation(mAnimationTop);
         setData();
     }
+/*
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem menuItem = menu.findItem(R.id.action_choose_year);
 
+        if (menuItem != null){
+            menuItem.getIcon().setAlpha(255);
+            menuItem.getIcon().setColorFilter(getResources().getColor(R.color.app_background), PorterDuff.Mode.MULTIPLY);
+        }
+
+        super.onPrepareOptionsMenu(menu);
+
+    }
+*/
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);

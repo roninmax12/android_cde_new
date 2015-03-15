@@ -32,6 +32,22 @@
         <item>Выход</item>
     </string-array>
 
+    <string name="monday">Понедельник</string>
+    <string name="tuesday">Вторник</string>
+    <string name="wednesday">Среда</string>
+    <string name="thursday">Четверг</string>
+    <string name="friday">Пятница</string>
+    <string name="saturday">Суббота</string>
+    <string name="sunday">Воскресенье</string>
+    <string name="day">День</string>
+
+    <string name="ifmo_kron">Кронверкский пр., д. 49А</string>
+    <string name="ifmo_griv">Пер. Гривцова, д. 14-16</string>
+
+    <string name="no_schedule">Занятий нет</string>
+    <string name="even_week">Чётная неделя</string>
+    <string name="oven_week">Нечётная неделя</string>
+
     <string name="settings_title_semester">Текущий семестр</string>
     <string name="settings_subtitle_semester">Показывать баллы только за текущий семестр</string>
     <string name="settings_title_notification">Уведомления</string>

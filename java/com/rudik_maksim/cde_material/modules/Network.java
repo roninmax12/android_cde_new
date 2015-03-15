@@ -6,6 +6,7 @@ import com.rudik_maksim.cde_material.controllers.SimpleAsyncTask;
 import com.rudik_maksim.cde_material.modules.interfaces.INetworkListener;
 import com.rudik_maksim.cde_material.modules.parsers.PointParser;
 import com.rudik_maksim.cde_material.modules.parsers.RatingParser;
+import com.rudik_maksim.cde_material.modules.parsers.ScheduleParser;
 import com.rudik_maksim.cde_material.modules.parsers.SessionParser;
 
 import java.io.BufferedReader;
@@ -98,6 +99,7 @@ public class Network {
         INetworkListener mNetworkListener;
         public final int ACTION_POINTS = 0;
         public final int ACTION_RATING = 2;
+        public final int ACTION_SCHEDULE = 3;
         public final int ACTION_SESSION = 4;
 
         public Query(INetworkListener networkListener){
@@ -111,6 +113,9 @@ public class Network {
                     break;
                 case ACTION_RATING:
                     new SimpleAsyncTask<RatingParser>(new RatingParser(), mNetworkListener).execute();
+                    break;
+                case ACTION_SCHEDULE:
+                    new SimpleAsyncTask<ScheduleParser>(new ScheduleParser(), mNetworkListener).execute();
                     break;
                 case ACTION_SESSION:
                     new SimpleAsyncTask<SessionParser>(new SessionParser(), mNetworkListener).execute();

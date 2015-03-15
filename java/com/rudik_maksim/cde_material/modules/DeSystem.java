@@ -16,6 +16,9 @@ public class DeSystem {
     private static final String RATING = "servlet/distributedCDE?Rule=REP_EXECUTE_PRINT&REP_ID=1441";
     private static final String RECORD = "--schedule/index.php";
     private static final String SESSION = "ru/exam/0/";
+    private static final String SCHEDULE = "mobile/schedule.php";
+
+    private static final String SCHEDULE_PARAMS = "login=ifmo01&pass=01ifmo04&gr=";
 
     public static String getEregisterUrl(){
         return HOST_DE + EREGISTER;
@@ -29,12 +32,20 @@ public class DeSystem {
         return HOST_DE + RECORD + "?login=" + login + "&passwd=" + password + "&role=%D1%F2%F3%E4%E5%ED%F2";
     }
 
-    public static URL getSessionUrl(User user) throws MalformedURLException{
+    public static URL getSessionUrl(User user) throws MalformedURLException {
         String group = user.getCurrentGroup();
 
         if (user.isIhbtStudent())
             group = "i" + user.getCurrentGroup().substring(1);
 
         return new URL(HOST_IFMO + SESSION + group + "/raspisanie_sessii_" + group + ".htm");
+    }
+
+    public static String getScheduleUrl() {
+        return HOST_IFMO + SCHEDULE;
+    }
+
+    public static String setScheduleParams(String group) {
+        return SCHEDULE_PARAMS + group;
     }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frameLayout"
+    style="@style/LayoutVerticalStyle">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        style="@style/ScrollViewStyle">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutContainer"
+            style="@style/LayoutVerticalStyle">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextViewInvisibleStyle"/>
+
+</FrameLayout>
