@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_schedule_group"
+        android:icon="@drawable/ic_action_group_white"
+        android:title="@string/schedule_group"
+        android:visible="true"
+        android:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_schedule_teacher"
+        android:icon="@drawable/ic_action_person_white"
+        android:title="@string/schedule_teacher"
+        android:visible="true"
+        android:showAsAction="ifRoom" />
+</menu>

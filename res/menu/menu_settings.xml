@@ -3,7 +3,7 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/action_choose_year"
+    <item android:id="@+id/action_about"
         android:icon="@drawable/ic_action_about_white"
         android:title="@string/about_app"
         android:visible="true"

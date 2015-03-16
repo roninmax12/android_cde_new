@@ -100,20 +100,7 @@ public class PointsFragment extends AbstractAuthorizationFragment implements INe
         mFrameLayout.startAnimation(mAnimationTop);
         setData();
     }
-/*
-    @Override
-    public void onPrepareOptionsMenu(Menu menu) {
-        MenuItem menuItem = menu.findItem(R.id.action_choose_year);
 
-        if (menuItem != null){
-            menuItem.getIcon().setAlpha(255);
-            menuItem.getIcon().setColorFilter(getResources().getColor(R.color.app_background), PorterDuff.Mode.MULTIPLY);
-        }
-
-        super.onPrepareOptionsMenu(menu);
-
-    }
-*/
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);

@@ -68,7 +68,7 @@ public class SettingsFragment extends AbstractListFragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.action_choose_year:
+            case R.id.action_about:
                 new DialogAboutFragment().show(getFragmentManager(), DialogAboutFragment.TAG_ABOUT);
                 break;
         }

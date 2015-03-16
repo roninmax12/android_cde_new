@@ -6,11 +6,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rudik_maksim.cde_material.R;
 import com.rudik_maksim.cde_material.controllers.adapters.SessionAdapter;
+import com.rudik_maksim.cde_material.controllers.dialogs.DialogChooseYearFragment;
 import com.rudik_maksim.cde_material.modules.Global;
 import com.rudik_maksim.cde_material.modules.Network;
 import com.rudik_maksim.cde_material.modules.Schedule;
@@ -92,6 +97,32 @@ public class ScheduleFragment extends AbstractPagerFragment implements IFragment
     @Override
     public void onFinishQuery() {
         setData();
+    }
+
+
+    /**
+     * Options menu
+     */
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+
+        inflater.inflate(R.menu.menu_schedule, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_schedule_group:
+                Toast.makeText(getActivity(), item.getTitle(), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_schedule_teacher:
+                Toast.makeText(getActivity(), item.getTitle(), Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     /**
@@ -188,14 +219,33 @@ public class ScheduleFragment extends AbstractPagerFragment implements IFragment
                     View item_content = sLayoutInflater.inflate(R.layout.item_schedule_content, sLinearLayoutContainer, false);
 
                     TextView textViewSubject = (TextView) item_content.findViewById(R.id.textView_subject);
+                    TextView textViewStatus = (TextView) item_content.findViewById(R.id.textView_status);
                     TextView textViewTime = (TextView) item_content.findViewById(R.id.textView_time);
                     TextView textViewRoom = (TextView) item_content.findViewById(R.id.textView_room);
                     TextView textViewTeacher = (TextView) item_content.findViewById(R.id.textView_teacher);
 
                     textViewSubject.setText(item.getSubject());
                     textViewTime.setText(item.getTime());
-                    textViewRoom.setText(item.getRoom());
-                    textViewTeacher.setText(item.getTeacher());
+
+                    if (item.getSubjectStatus().length() > 1) {
+                        textViewStatus.setLines(1);
+                        textViewStatus.setVisibility(View.VISIBLE);
+                        textViewStatus.setText(item.getRightStatus());
+                    }
+
+                    if (item.getRoom().length() < 1) {
+                        textViewRoom.setText(getString(R.string.no_data));
+                        textViewRoom.setTextColor(getResources().getColor(R.color.textview_sub_color));
+                    } else {
+                        textViewRoom.setText(item.getRoom());
+                    }
+
+                    if (item.getTeacher().length() < 1) {
+                        textViewTeacher.setText(getString(R.string.no_data));
+                        textViewTeacher.setTextColor(getResources().getColor(R.color.textview_sub_color));
+                    } else {
+                        textViewTeacher.setText(item.getTeacher());
+                    }
 
                     sLinearLayoutContainer.addView(item_content);
                 }
@@ -203,6 +253,4 @@ public class ScheduleFragment extends AbstractPagerFragment implements IFragment
         }
 
     }
-
-
 }

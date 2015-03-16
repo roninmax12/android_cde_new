@@ -34,6 +34,14 @@ public class ScheduleItem {
         mSubjectStatus = subjectStatus;
     }
 
+    public String getRightStatus() {
+        if (mSubjectStatus.equals("Прак")) return "Практика";
+        if (mSubjectStatus.equals("Лек"))  return "Лекция";
+        if (mSubjectStatus.equals("Лаб"))  return "Лабораторная работа";
+
+        return mSubjectStatus;
+    }
+
     public String getTime() {
         return mTime;
     }

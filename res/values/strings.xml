@@ -79,4 +79,7 @@
     <string name="exams">Экзамены</string>
     <string name="consultations">Консультации</string>
 
+    <string name="schedule_group">Расписание группы</string>
+    <string name="schedule_teacher">Расписание преподавателя</string>
+
 </resources>
